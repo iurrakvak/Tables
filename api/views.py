@@ -89,6 +89,7 @@ class OperationGeneralView(SingleTableView, FilterView):
             self.page = int(limit)
         return queryset
 
+
 class RootView(SingleTableView, FilterView):
     """
     Displays all views available

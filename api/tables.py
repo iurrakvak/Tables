@@ -7,8 +7,6 @@ from api.models import Account, Root, Operation
 class AccountTable(tables.Table):
     """Table class for account display"""
 
-
-
     class Meta:
         model = Account
         template_name = 'django_tables2/bootstrap4.html'
@@ -48,7 +46,7 @@ class OperationTable(tables.Table):
     class Meta:
         model = Operation
         template_name = 'django_tables2/bootstrap4.html'
-        fields = ['amount', 'type', 'date', 'account_number']
+        fields = ['id', 'amount', 'type', 'date',  'account_number',]
 
 
 class RootTable(tables.Table):
