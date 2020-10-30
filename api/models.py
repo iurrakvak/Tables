@@ -5,7 +5,7 @@ class Account(models.Model):
     number = models.PositiveBigIntegerField(unique=True,
                                             editable=False)
     name = models.TextField()
-    date = models.DateTimeField(auto_now_add=True,
+    register_date = models.DateTimeField(auto_now_add=True,
                                 editable=False)
 
 
@@ -28,4 +28,10 @@ class Operation(models.Model):
                             blank=False)
     date = models.DateTimeField(auto_now_add=True,
                                 editable=False)
+
+
+class Root(models.Model):
+    view = models.TextField()
+    path = models.TextField()
+    description = models.TextField(default=None)
 
